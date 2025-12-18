@@ -1,87 +1,87 @@
-
-body{
-    margin-top: 100px;
-    display:flex;
+body {
+    margin: 100px 0 0 0;
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     background-color: #cacaca;
+    font-family: Arial, sans-serif;
 }
 
-.calcBody{
-    display:flex;
-    flex-direction:column;
-    border: 1px solid black;
+.calcBody {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin:0 auto;
-    height: 550px;
+    margin: 0 auto;
     width: 300px;
+    height: 550px;
     border-radius: 10px;
-    background-color: rgb(186, 199, 210);   
-    box-shadow: 6px 10px 10px 10px ;
+    background-color: #bac7d2;   
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid #000;
 }
 
-
-.disBox{
-    height:80px;
-    width: 250px;
-    border-radius: 5px;
+.disBox {
+    width: 90%;
+    height: 80px;
+    margin-bottom: 20px;
     border: none;
-    box-shadow: 0 0 2px rgba(0,0,0,0.1);
+    border-radius: 5px;
     background-color: #f1ffcc;
-    font-family: Arial;
-    font-size:30px;
-
+    font-size: 30px;
+    padding: 10px;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
 }
-.disBox:focus{
+
+.disBox:focus {
     outline: none;
     color: black;
 }
 
-.buttonHolder{
-    display: inline-grid;
-    grid-template-columns:auto auto auto;
-    width:250px;
-    height: 350px;
-    margin-top: 30px;
-    column-gap: 5px;
-    row-gap: 5px;
-    border-radius:5px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    
+.buttonHolder {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    width: 250px;
 }
-.buttonh{
-    display: block;
-    flex-direction: column;
-    border:none;
-    border-radius: 3px;
-    margin:auto;
-    
-    
+
+.buttonh {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-button{
-    background-color: rgb(244, 241, 241);
+
+button {
     width: 75px;
     height: 60px;
     border: none;
     border-radius: 5px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f4f1f1;
     font-size: 25px;
     box-shadow: 0 0 3px rgba(227, 158, 19, 0.938);
-    
-   
+    cursor: pointer;
+    transition: 0.3s;
 }
-button:hover{
-    background-color: rgba(244, 241, 241, 0.386);
-    transition: 1s;
+
+button:hover {
+    background-color: #e0dfdf;
 }
-button:active{
-    background-color: rgba(88, 169, 206);
-    transition: none;
-    
+
+button:active {
+    background-color: #58a9ce;
 }
+
+.clearC {
+    background-color: #ff6666;
+    color: white;
+}
+
+.clearC:hover {
+    background-color: #ff4d4d;
+    }
+
 
 
 

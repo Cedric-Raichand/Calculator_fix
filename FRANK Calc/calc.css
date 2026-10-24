@@ -75,10 +75,6 @@ body {
     color: #777;
 }
 
-/* =========================
-   BUTTON GRID
-========================= */
-
 .buttonHolder {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));

@@ -90,10 +90,6 @@ body {
     min-width: 0;
 }
 
-/* =========================
-   CALCULATOR BUTTONS
-========================= */
-
 button {
     width: 100%;
     max-width: 75px;

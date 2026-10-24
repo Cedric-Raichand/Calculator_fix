@@ -1,3 +1,224 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, #cacaca, #e5e5e5);
+    font-family: Arial, sans-serif;
+}
+
+/* =========================
+   CALCULATOR BODY
+========================= */
+
+.calcBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin: 0 auto;
+    width: 300px;
+    min-height: 550px;
+    padding: 25px 15px;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #c8d3dd, #aebdca);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow:
+        8px 8px 20px rgba(0, 0, 0, 0.15),
+        -5px -5px 15px rgba(255, 255, 255, 0.45);
+    transition: box-shadow 0.3s ease;
+}
+
+.calcBody:hover {
+    box-shadow:
+        10px 12px 25px rgba(0, 0, 0, 0.18),
+        -5px -5px 15px rgba(255, 255, 255, 0.45);
+}
+
+/* =========================
+   DISPLAY SCREEN
+========================= */
+
+.disBox {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 20px;
+    border: 2px solid rgba(70, 90, 60, 0.15);
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f1ffcc, #e6f5bd);
+    color: #222;
+    font-size: 30px;
+    font-family: inherit;
+    font-weight: 500;
+    padding: 12px;
+    text-align: right;
+    box-shadow:
+        inset 0 3px 7px rgba(0, 0, 0, 0.1),
+        0 2px 4px rgba(255, 255, 255, 0.4);
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.disBox:focus {
+    outline: none;
+    border-color: #58a9ce;
+    box-shadow:
+        inset 0 3px 7px rgba(0, 0, 0, 0.08),
+        0 0 0 3px rgba(88, 169, 206, 0.2);
+}
+
+.disBox::placeholder {
+    color: #777;
+}
+
+/* =========================
+   BUTTON GRID
+========================= */
+
+.buttonHolder {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    width: 100%;
+}
+
+/* =========================
+   BUTTON HOLDER
+========================= */
+
+.buttonh {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+}
+
+/* =========================
+   CALCULATOR BUTTONS
+========================= */
+
+button {
+    width: 100%;
+    max-width: 75px;
+    height: 60px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    background: linear-gradient(145deg, #ffffff, #e9e7e7);
+    color: #292929;
+    font-family: inherit;
+    font-size: 25px;
+    font-weight: 500;
+    box-shadow:
+        0 4px 7px rgba(0, 0, 0, 0.12),
+        0 0 3px rgba(227, 158, 20, 0.3);
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition:
+        background 0.25s ease,
+        transform 0.15s ease,
+        box-shadow 0.25s ease;
+}
+
+button:hover {
+    background: linear-gradient(145deg, #f2f2f2, #dedede);
+    transform: translateY(-2px);
+    box-shadow:
+        0 6px 10px rgba(0, 0, 0, 0.15),
+        0 0 4px rgba(227, 158, 20, 0.35);
+}
+
+button:active {
+    background: #58a9ce;
+    color: white;
+    transform: scale(0.95);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+button:focus-visible {
+    outline: 3px solid #58a9ce;
+    outline-offset: 3px;
+}
+
+/* =========================
+   CLEAR BUTTON
+========================= */
+
+.clearC {
+    background: linear-gradient(145deg, #ff7777, #ff5555);
+    color: white;
+    box-shadow: 0 4px 8px rgba(255, 77, 77, 0.2);
+}
+
+.clearC:hover {
+    background: linear-gradient(145deg, #ff5e5e, #ed3838);
+    color: white;
+    box-shadow: 0 6px 12px rgba(255, 77, 77, 0.3);
+}
+
+.clearC:active {
+    background: #d92f2f;
+    color: white;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 360px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    .calcBody {
+        width: 100%;
+        max-width: 300px;
+        min-height: 520px;
+        padding: 20px 12px;
+    }
+
+    .disBox {
+        height: 70px;
+        font-size: 26px;
+    }
+
+    .buttonHolder {
+        gap: 8px;
+    }
+
+    button {
+        height: 55px;
+        font-size: 22px;
+    }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+  }
 
 

@@ -151,9 +151,6 @@ button:focus-visible {
     color: white;
 }
 
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
 
 @media (max-width: 360px) {
     body {
@@ -191,5 +188,3 @@ button:focus-visible {
         animation-duration: 0.01ms !important;
     }
   }
-
-

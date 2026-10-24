@@ -133,9 +133,6 @@ button:focus-visible {
     outline-offset: 3px;
 }
 
-/* =========================
-   CLEAR BUTTON
-========================= */
 
 .clearC {
     background: linear-gradient(145deg, #ff7777, #ff5555);

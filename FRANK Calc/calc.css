@@ -17,10 +17,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* =========================
-   CALCULATOR BODY
-========================= */
-
 .calcBody {
     display: flex;
     flex-direction: column;
